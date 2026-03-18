@@ -2,8 +2,8 @@ from datetime import datetime
 import time
 import os
 
-sleep_prepare = '21:00'
-sleep_begin = '21:30'
+sleep_prepare = '21:30'
+sleep_begin = '22:00'
 sleep_end = '06:30'
 
 sleep_prepare = [int(i) for i in sleep_prepare.split(':')]
