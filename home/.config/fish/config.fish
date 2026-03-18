@@ -7,17 +7,42 @@ if status is-interactive
 
     set -Ux EDITOR "nvim"
 
+    # in the future i may factor these out in a function
+    # function stream
+    #     set url $argv[1]
+    #     set args $argv[2..-1]
+    #
+    #     set opts "--force-window=immediate"
+    #
+    #     if contains -- --worst $args
+    #         set opts $opts "--ytdl-format=worst"
+    #     end
+    #
+    #     if contains -- --cookies $args
+    #         set opts $opts "--ytdl-raw-options=cookies-from-browser=firefox"
+    #     end
+    #
+    #     mpv $opts $url
+    # end
+    # `X-cookies` is needed when YT asks me to comfirm i'm not a bot
+    # `X-worst` is needed when my internet is shit, usually it doesn't affect the quality of audio that much
     set -Ux LOFI_URL "https://youtu.be/jfKfPfyJRdk"
     alias lofi="mpv --force-window=immediate $LOFI_URL"
     alias lofi-cookies="mpv --force-window=immediate $LOFI_URL --ytdl-raw-options=cookies-from-browser=firefox"
+    alias lofi-worst="mpv --ytdl-format=worst --force-window=immediate $LOFI_URL"
+    alias lofi-cookies-worst="mpv --ytdl-format=worst --force-window=immediate $LOFI_URL --ytdl-raw-options=cookies-from-browser=firefox"
 
     set -Ux RGN_URL "https://youtu.be/-56sPua2-f4"
     alias rgn="mpv --force-window=immediate $RGN_URL"
     alias rgn-cookies="mpv --force-window=immediate $RGN_URL --ytdl-raw-options=cookies-from-browser=firefox"
+    alias rgn-worst="mpv --ytdl-format=worst --force-window=immediate $RGN_URL"
+    alias rgn-cookies-worst="mpv --ytdl-format=worst --force-window=immediate $RGN_URL --ytdl-raw-options=cookies-from-browser=firefox"
 
     set -Ux PIANO_URL "https://youtu.be/TtkFsfOP9QI"
     alias piano="mpv --force-window=immediate $PIANO_URL"
     alias piano-cookies="mpv --force-window=immediate $PIANO_URL --ytdl-raw-options=cookies-from-browser=firefox"
+    alias piano-worst="mpv --ytdl-format=worst --force-window=immediate $PIANO_URL"
+    alias piano-cookies-worst="mpv --ytdl-format=worst --force-window=immediate $PIANO_URL --ytdl-raw-options=cookies-from-browser=firefox"
 
     alias yt-cookies="yt --cookies-from-browser firefox"
 
