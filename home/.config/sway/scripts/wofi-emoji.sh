@@ -6,8 +6,15 @@ EMOJI="$(sed '1,/^### DATA ###$/d' "$0" \
   | my-wofi-wrapper -p "emoji" --normal-window --show dmenu -i \
   | cut -d ' ' -f 1 | tr -d '\n')"
 
-wtype "$EMOJI"
 wl-copy "$EMOJI"
+
+title=$(swaymsg -t get_tree | jq -r '.. | select(.focused? == true) | .name')
+
+if [[ "$title" == *Discord ]]; then
+    wtype -M ctrl -k v -m ctrl
+else
+    wtype "$EMOJI"
+fi
 
 ### DATA ###
 👍🥲 yep
