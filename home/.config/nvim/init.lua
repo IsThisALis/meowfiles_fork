@@ -828,6 +828,16 @@ require("lazy").setup({
 				}),
 			})
 
+			ls.add_snippets("javascriptreact", {
+				s("ctag", {
+					t("<"),
+					i(1, "div"), -- type the tag name here
+					t(" "),
+					i(0), -- cursor for attributes/content
+					t("/>"),
+				}),
+			})
+
 			ls.add_snippets("typescriptreact", {
 				s("xtag", {
 					t("<"),
@@ -854,7 +864,23 @@ require("lazy").setup({
 				}),
 			})
 
-			ls.add_snippets("javascriptreact", {
+			ls.add_snippets("svelte", {
+				s("xtag", {
+					t("<"),
+					i(1, "div"),
+					t(">"),
+					i(0),
+					t("</"),
+					f(function(args)
+						-- Take only the first word before a space
+						local tag = args[1][1]
+						return tag:match("^%S+")
+					end, { 1 }),
+					t(">"),
+				}),
+			})
+
+			ls.add_snippets("svelte", {
 				s("ctag", {
 					t("<"),
 					i(1, "div"), -- type the tag name here
