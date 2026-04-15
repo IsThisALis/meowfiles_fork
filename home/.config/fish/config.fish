@@ -38,7 +38,7 @@ if status is-interactive
     alias rgn-worst="mpv --ytdl-format=worst --force-window=immediate $RGN_URL"
     alias rgn-cookies-worst="mpv --ytdl-format=worst --force-window=immediate $RGN_URL --ytdl-raw-options=cookies-from-browser=firefox"
 
-    set -Ux PIANO_URL "https://youtu.be/TtkFsfOP9QI"
+    set -Ux PIANO_URL "https://youtu.be/N0snMcR6aaA"
     alias piano="mpv --force-window=immediate $PIANO_URL"
     alias piano-cookies="mpv --force-window=immediate $PIANO_URL --ytdl-raw-options=cookies-from-browser=firefox"
     alias piano-worst="mpv --ytdl-format=worst --force-window=immediate $PIANO_URL"
