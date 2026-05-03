@@ -916,12 +916,19 @@ require("lazy").setup({
 			require("luasnip.loaders.from_vscode").lazy_load()
 		end,
 	},
-	-- { -- Autocompletion
+	-- 	{
+  	-- 	"saghen/blink.lib",
+  	-- 	build = "cargo build --release",
+	--	},
+	--	
+	--	{ -- Autocompletion
 	-- 	"saghen/blink.cmp",
+	--  build = "cargo build --release",
 	-- 	event = "VimEnter",
 	-- 	version = "1.*",
 	-- 	dependencies = {
 	-- 		"hrsh7th/nvim-cmp",
+	--		"saghen/blink.lib",
 	-- 		-- Snippet Engine
 	-- 		{
 	-- 			"L3MON4D3/LuaSnip",
