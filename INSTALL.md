@@ -47,5 +47,5 @@ paru bongocat
 NeoVim:
 
 ```bash
-sudo pacman -S neovim
+sudo pacman -S neovim rust
 ```
